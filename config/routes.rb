@@ -1,5 +1,7 @@
 Jets.application.routes.draw do
   get 'roll/:dice_to_roll', to: 'dice_roller#roll'
+  post 'slack/roll', to: 'dice_roller#slack_roll'
+
   root "jets/public#show"
 
   # The jets/public#show controller can serve static utf8 content out of the public folder.
